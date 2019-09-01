@@ -8,6 +8,8 @@ int main() {
     char c = 'a';
     bool b = true;
 
+    cout << "sizeof: \n";
+
     cout << "int: " << sizeof(i) << endl;
     cout << "float: " << sizeof(f) << endl;
     cout << "double: " << sizeof(d) << endl;
