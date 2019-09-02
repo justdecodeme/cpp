@@ -2,6 +2,10 @@
 using namespace std;
 int main()
 {
+    // a - 97, z - 122
+    // A - 65, Z - 90
+    // 0 - 48
+    
     int choice; 
     int n;
     char c;
