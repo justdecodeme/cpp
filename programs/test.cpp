@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
-int main()
+int main() 
 {
-       char c = 74;
-       cout << c;
-       return 0;
-}
+    int var1 = 5;
+    int var2 = 6;
+    cout << (var1 > var2);
+ }
