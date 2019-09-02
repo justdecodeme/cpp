@@ -2,9 +2,7 @@
 using namespace std;
 
 int main() {
-    // Compiler assigns a garbage value to an uninitialised local variable in C++ Programming
-
-    int i = 4;
+    int i = 4; // 4 bytes generally, some computers allocate 2 bytes
     float f = 4.5;
     double d = 10.3;
     char c = 'a';

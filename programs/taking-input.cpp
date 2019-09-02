@@ -2,6 +2,10 @@
 using namespace std;
 
 int main() {
+    // ////////////////////////////////////
+    // Compiler assigns a garbage value to an uninitialised local variable in C++ Programming
+    // ////////////////////////////////////
+
     int a, b, c, d;
     
     cout << "Type two numbers to add: \n";
