@@ -1,9 +1,6 @@
 // 1
-// 12
-// 123
-// 1234
-// 12345
-// 123456
+// 23
+// 456
 
 #include <iostream>
 using namespace std;
