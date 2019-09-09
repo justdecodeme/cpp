@@ -1,3 +1,5 @@
+// Given a number N, print sum of all even numbers from 1 to N.
+
 #include <iostream>
 using namespace std;
 
