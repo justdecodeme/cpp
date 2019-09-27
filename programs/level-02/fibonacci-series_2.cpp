@@ -15,5 +15,8 @@ int main()
     cout << "Type number: ";
     cin >> n;
 
-    cout << fib(n);
+    for(int i = 1; i <= n; i++) {
+        cout << fib(i) << " ";
+    }
+
 }

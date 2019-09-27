@@ -5,6 +5,7 @@ int main()
 {
     int n;
     int a = 1, b = 1, c = 1;
+    
     cout << "Type number: ";
     cin >> n;
 
