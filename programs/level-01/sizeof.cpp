@@ -7,6 +7,7 @@ int main() {
     double d = 10.3;
     char c = 'a';
     bool b = true;
+    int a[10];
 
     cout << "sizeof (in bytes): \n";
 
@@ -15,4 +16,5 @@ int main() {
     cout << "double: " << sizeof(d) << endl; // 8
     cout << "char: " << sizeof(c) << endl; // 1
     cout << "bool: " << sizeof(b) << endl; // 1
+    cout << "array: " << sizeof(a) << endl; // 40 (10 * 4)
 }
