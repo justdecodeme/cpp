@@ -21,5 +21,5 @@ int main() {
         binary = binary / 10;
     }
 
-    cout << decimal;
+    cout << "Decimal is: " << decimal;
 }
