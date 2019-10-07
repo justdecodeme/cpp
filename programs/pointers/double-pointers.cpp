@@ -43,5 +43,29 @@ int main() {
 
     cout << i << endl; // 11
     cout << *p << endl; // 11
-    cout << **p2 << endl; // 11    
+    cout << **p2 << endl; // 11   
+
+
+
+    // int a = 10;
+    // int *p = &a;
+    // int **q = &p;
+    // int b = 20;
+    // *q = &b;
+    // (*p)++;
+    // cout << a << " " << b << endl; // 10 21
+
+    // int a = 100;
+    // int *p = &a;
+    // int **q = &p;
+    // int b = (**q)++;
+    // int *r = *q;
+    // (*r)++;
+    // cout << a << " " << b << endl; // 102 100
+
+    // int a = 100;
+    // int *p = &a;
+    // int **q = &p;
+    // int b = (**q)++ + 4;
+    // cout << a << " " << b << endl; // 101 104    
 }
