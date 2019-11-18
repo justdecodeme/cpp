@@ -2,40 +2,50 @@
 
 // NOT WORKING AS EXPECTED
 
-// input
+// Sample Input:
 // 6
 // 9 3 6 12 4 32
 
-// output
+// Sample Output:
 // 3 9 12 6 32 4
+
+// Sample Input:
+// 9
+// 9 3 6 12 4 32 5 11 19
+
+// Sample Output:
+// 3 9 12 6 32 4 11 5 19
+
 
 #include<iostream>
 using namespace std;
 
 int main() {
-    int arr[1000];
-    int n;
+    int arr[100];
+    int size;
 
     cout << "Enter any integer: ";
-    cin >> n;
+    cin >> size;
 
     cout << "Enter array elements (separated by space): ";
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < size; i++) {
         cin >> arr[i];
     }    
     
     int i = 0, temp;
 
-    while(i <= n - 1){
-        int j = ++i;
+    while(i <= size - 2){
+        int j = i + 1;
         temp = arr[i];
+
         arr[i] = arr[j];
         arr[j] = temp;
-        i++;
+        
+        i += 2;
     }    
 
-   for(int i = 0; i < n; i++) {
+   for(int i = 0; i < size; i++) {
        cout << arr[i] << " ";
    }
    
