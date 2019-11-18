@@ -17,20 +17,62 @@
 // Sample Output :
 // 1
 
-int FindUnique(int * arr, int size){
-    int i=0;
-    for(i;i<size;i++){
-        int a=arr[i];
-        int count=0;
-        for(int b=0;b<size;b++){
-            if((a!=arr[b])&&(b!=i)){
+#include <iostream>
+using namespace std;
+
+// method 1
+// int findUnique(int *arr, int size)
+// {
+//     for (int i = 0; i < size; i++)
+//     {
+//         int a = arr[i];
+//         int count = 0;
+//         for (int j = 0; j < size; j++)
+//         {
+//             if ((a != arr[j]) && (j != i))
+//             {
+//                 count++;
+//             }
+//             if (count == (size - 1))
+//             {
+//                 return arr[i];
+//             }
+//         }
+//     }
+//     return -1;
+// }
+
+// method 2
+int findUnique(int *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        int a = arr[i];
+        int count = 0;
+        for (int j = 0; j < size; j++) {
+            if ((a == arr[j]) && (j != i)) {
                 count++;
-            }
-            if(count==(size-1)){
-                return arr[i];
+                break;
             }
         }
-    
+        if (count == 0) {
+            return arr[i];
+        }
     }
+    return -1;
 }
 
+int main() {
+    int arr[100];
+    int size;
+
+    cout << "Enter array size: ";
+    cin >> size;
+
+    cout << "Enter array elements (separated by space): ";
+
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+
+    cout << "Unique number is: " << findUnique(arr, size) << endl;
+}

@@ -25,25 +25,47 @@
 // 2 5
 // 3 4
 // 3 4
+// Sample Input:
+// 7
+// 2 3 1 5 3 2 2
+// Sample Output :
+// 2 2
+// 1 3
 
-void pairSum(int input[], int size, int x) {
-    int i=0;
-    for(i;i<size;i++){
-        for(int b=i+1;b<size;b++){
-            if((input[i]+input[b])==x){
-                if(input[i]<input[b]){
-                    cout<<input[i]<<" "<<input[b]<<endl;
-                }
-                else{
-                    cout<<input[b]<<" "<<input[i]<<endl;
+#include <iostream>
+using namespace std;
+
+void findPairs(int arr[], int size, int num) {
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if ((arr[i] + arr[j]) == num) {
+                if (arr[i] < arr[j]) {
+                    cout << arr[i] << " " << arr[j] << endl;
+                } else {
+                    cout << arr[j] << " " << arr[i] << endl;
                 }
             }
         }
     }
-    /* Don't write main().
-     * Don't read input, it is passed as function argument.
-     * Print the output and don't return it.
-     * Taking input is handled automatically.
-     */
+}
 
+int main() {
+    int arr[100];
+    int size, num;
+
+    cout << "Enter array size: ";
+    cin >> size;
+
+    cout << "Enter array elements (separated by space): ";
+
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+
+    cout << "Enter any integer: ";
+    cin >> num;
+
+    cout << "Pairs are: " << endl;
+    findPairs(arr, size, num);
 }

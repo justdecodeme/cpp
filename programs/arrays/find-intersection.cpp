@@ -29,27 +29,45 @@
 // 2
 // 1
 
+#include <iostream>
 #include<climits>
-// input1 - first array
-// input2 - second array
-// size1 - size of first array
-// size2 - size of second array
+using namespace std;
 
-void intersection(int input1[], int input2[], int size1, int size2) {
-    int i=0,j;
-    for(i;i<size1;i++){
-        for(j=0;j<size2;j++){
-            if(input1[i]==input2[j]){
-                input2[j]=INT_MIN;
-                cout<<input1[i]<<endl;
+void findIntersection(int arr1[], int arr2[], int size1, int size2) {
+
+    for (int i = 0; i < size1; i++) {
+        for (int j = 0; j < size2; j++) {
+            if (arr1[i] == arr2[j]) {
+                arr2[j] = INT_MIN;
+                cout << arr1[i] << endl;
                 break;
             }
         }
     }
-    /* Don't write main().
-     * Don't read input, it is passed as function argument.
-     * Print the output and don't return it.
-     * Taking input is handled automatically.
-     */
+}
 
+int main() {
+    int arr1[100], arr2[100];
+    int size1, size2;
+
+    cout << "Enter array size: ";
+    cin >> size1;
+
+    cout << "Enter array elements (separated by space): ";
+
+    for (int i = 0; i < size1; i++) {
+        cin >> arr1[i];
+    }
+
+    cout << "Enter array size: ";
+    cin >> size2;
+
+    cout << "Enter array elements (separated by space): ";
+
+    for (int i = 0; i < size2; i++) {
+        cin >> arr2[i];
+    }
+
+    cout << "Intersections numbers are: " << endl;
+    findIntersection(arr1, arr2, size1, size2);
 }
