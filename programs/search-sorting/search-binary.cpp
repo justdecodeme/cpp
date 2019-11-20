@@ -22,22 +22,43 @@
 // Sample Output 2:
 // -1
 
-// arr - input array
-// n - size of array
-// val - element to be searched
-int BinarySearch(int arr[], int n, int val){
-    int start=0,end=n-1,mid;
+#include<iostream>
+using namespace std;
 
-    while(start<=end){
-        mid=(start+end)/2;
-        if(val==arr[mid]){
+int binarySearch(int *arr, int size, int val) {
+    int start = 0, end = size - 1, mid;
+
+    while (start <= end) {
+        mid = (start + end) / 2;
+        
+        if (val == arr[mid]) {
             return mid;
-        } else if (arr[mid]<val){
-            start=mid+1;
-        } else if(arr[mid]>val){
-            end=mid-1;
+        }
+        else if (arr[mid] < val) {
+            start = mid + 1;
+        }
+        else if (arr[mid] > val) {
+            end = mid - 1;
         }
     }
-    
+
     return -1;
+}
+
+int main() {
+    int arr[100], size, val;
+
+    cout << "Array length: ";
+    cin >> size;
+
+    cout << "Array elements (separated by space): ";
+    
+    for(int i = 0; i < size; i++){
+        cin >> arr[i];
+    } 
+
+    cout << "Value to search: ";
+    cin >> val;
+
+    cout << "Index of element: " << binarySearch(arr, size, val) << endl;
 }
