@@ -1,6 +1,15 @@
-// Given a sorted integer array (in ascending order) and an element x. You need to search this element x in the given input array using binary search. Return the index of element in the input.
+// !Time complexity: 
+// !Worst case: O(log n)
+// !Best case: O(1)
+
+// !Input data must needs to be sorted in Binary Search
+
+// Given a sorted integer array (in ascending order) and an element x. 
+// You need to search this element x in the given input array using binary search. 
+// Return the index of element in the input.
 // Indexing starts from 0.
 // Return -1 if x is not present in the input array.
+
 // Input format :
 // Line 1 : Integer N, Array Size
 // Line 2 : Array elements (separated by space)
@@ -31,17 +40,20 @@ int binarySearch(int *arr, int size, int val) {
     while (start <= end) {
         mid = (start + end) / 2;
         
+        /* Check if val is present at mid */
         if (val == arr[mid]) {
             return mid;
         }
+        /* If val greater, ignore left half */
         else if (arr[mid] < val) {
             start = mid + 1;
         }
+        /* If x is smaller, ignore right half */
         else if (arr[mid] > val) {
             end = mid - 1;
         }
     }
-
+    /* if we reach here, then element was not present */
     return -1;
 }
 

@@ -1,3 +1,12 @@
+// !Time complexity: 
+// !Worst case: O(n)
+// !Best case: O(1)
+
+
+// !Linear search is rarely used practically because other search algorithms such as the 
+// !binary search algorithm and hash tables allow significantly faster searching comparison 
+// !to Linear search.
+
 // Given a random integer array A and an element x. You need to search this element x 
 // in the given array using linear search. Return the index of element in the input.
 // Linear search means, we need to compare elements from the array A one by one with 

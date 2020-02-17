@@ -1,3 +1,6 @@
+// Compile > g++ -g filename.cpp
+// run > ./a.out
+
 Some C++ data types, their format specifiers, and their most common bit widths are as follows:
 
 Int ("%d"): 32 Bit integer
