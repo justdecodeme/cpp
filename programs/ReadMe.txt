@@ -1,5 +1,11 @@
-// Compile > g++ -g filename.cpp
-// run > ./a.out
+// COMPILE:
+//---------
+// g++ -g filename.cpp
+
+// RUN:
+//-----
+// Mac: ./a.out
+// Windows: ./a.exe
 
 Some C++ data types, their format specifiers, and their most common bit widths are as follows:
 

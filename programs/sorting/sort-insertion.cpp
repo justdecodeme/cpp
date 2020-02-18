@@ -1,3 +1,14 @@
+// !Time complexity: 
+// !Worst case: O(n^2) -> array is reverse sorted
+// !Best case: O(n) -> array is sorted
+
+// !Space complexity: 
+// !O(1)
+
+/* 
+Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+ */
+
 #include<iostream>
 using namespace std;
 
