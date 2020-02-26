@@ -1,3 +1,10 @@
+// !Time complexity: 
+// !Worst case: O(n logn) -> array is reverse sorted
+// !Best case: O() -> array is sorted
+
+// !Space complexity: 
+// !O()
+
 #include<iostream>
 using namespace std;
 
